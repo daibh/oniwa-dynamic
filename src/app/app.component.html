@@ -1,16 +1,20 @@
 <ngx-hello name="{{ name }}"></ngx-hello>
 <div class="card">
-	<div class="card-header">
-		Angular Examples
-	</div>
-	<div class="card-body">
+  <div class="card-header">
+    Angular Examples
+  </div>
+  <div class="card-body">
     <div class="row">
       <div class="col-md-3">
-        <ngx-attribute-portlet></ngx-attribute-portlet>
+        <ngx-attribute-portlet [attributes]="attributes" (onChange)="onPortletChange($event)"></ngx-attribute-portlet>
       </div>
       <div class="col-md-9">
-        <ngx-attribute-form></ngx-attribute-form>
+        <ngx-attribute-form [attributeForm]="attributeForm" (onChange)="onFormChange($event)"></ngx-attribute-form>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">{{portlet | json}}</div>
+      <div class="col-md-9"></div>
     </div>
   </div>
 </div>

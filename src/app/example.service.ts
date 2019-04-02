@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { IAttribute } from './attribute-portlet/attribute-portlet.component';
 
 export interface IExample {
   name?: string;
@@ -15,6 +16,60 @@ export interface IExample {
 export class ExampleService {
 
   constructor() { }
+
+  public getAttributes(): Observable<IAttribute[]> {
+    let attributes: IAttribute[] = [
+      {
+        Id: '1',
+        Name: 'Username',
+        Label: 'Tài khoản',
+        Code: 'username',
+        Type: 'text',
+        Class: 'col-md-3'
+      },
+      {
+        Id: '2',
+        Name: 'Password',
+        Label: 'Mật khẩu',
+        Code: 'password',
+        Type: 'password',
+        Class: 'col-md-3'
+      },
+      {
+        Id: '3',
+        Name: 'DateOfBirth',
+        Label: 'Ngày sinh',
+        Code: 'dateofbirth',
+        Type: 'date',
+        Class: 'col-md-3'
+      },
+      {
+        Id: '4',
+        Name: 'Email',
+        Label: 'Email',
+        Code: 'email',
+        Type: 'email',
+        Class: 'col-md-3'
+      },
+      {
+        Id: '5',
+        Name: 'Phone',
+        Label: 'Điện thoại',
+        Code: 'text',
+        Type: 'text',
+        Class: 'col-md-3'
+      },
+      {
+        Id: '6',
+        Name: 'Address',
+        Label: 'Địa chỉ',
+        Code: 'address',
+        Type: 'text',
+        Class: 'col-md-3'
+      }
+    ];
+    return of(attributes);
+  }
 
   public getExamples(): Observable<IExample[]> {
     let examples = [

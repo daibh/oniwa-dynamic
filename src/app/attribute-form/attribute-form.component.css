@@ -1,22 +1,12 @@
-ul> ::ng-deep li {
-    list-style-type: none;
-    margin: .25rem;
-    padding: .25rem;
+.connectedSortable {
+    min-height: 10rem;
+    border: .05rem solid #ccc;
+    display: flex;
 }
 
-ul> ::ng-deep .ui-state-highlight::before {
-    content: '>';
-    padding: .25rem;
-    display: block;
-    color: #fffa90
-    /*{bgColorHighlight}*/
-    /*{bgImgUrlHighlight}*/
-    /*{bgHighlightXPos}*/
-    /*{bgHighlightYPos}*/
-    /*{bgHighlightRepeat}*/
-    ;
-}
-
-ul> ::ng-deep .ui-state-highlight {
-    list-style-type: none;
+.connectedSortable> ::ng-deep div {
+    width: unset;
+    max-width: unset;
+    padding: 0.25rem;
+    margin: 0.25rem;
 }

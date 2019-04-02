@@ -1,9 +1,5 @@
-<ul class="sortable connectedSortable">
-	<li class="ui-state-default">Item 1</li>
-	<li class="ui-state-default">Item 2</li>
-	<li class="ui-state-default">Item 3</li>
-	<li class="ui-state-default">Item 4</li>
-	<li class="ui-state-default">Item 5</li>
-	<li class="ui-state-default">Item 6</li>
-	<li class="ui-state-default">Item 7</li>
-</ul>
+<button type="button" (click)="onClick($event)">Click</button>
+<div class="sortable connectedSortable">
+	<div class="ui-state-default {{item.Class}}" *ngFor="let item of attributes" [(ngModel)]="item" ngDefaultControl>
+		{{item.Label}}</div>
+</div>
